@@ -1,23 +1,41 @@
-﻿using System;
+﻿
 
-namespace TimeLoop
+using System;
+
+namespace ConsoleAppStuckInATimeLoop
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int x = int.Parse(Console.ReadLine());
 
-            for (int i = 0; i <= x; i++)
+
+
+
+            int length = int.Parse(Console.ReadLine());
+
+            //Count starting from 1
+            int OrderCounter = 1;
+
+
+            while (length >= OrderCounter)
+            {
+
+                Console.WriteLine(OrderCounter.ToString() + " " + "Abracadabra");
+                OrderCounter++;
+
+
+            }
+
+
+            //Could have used a For loop instead of a while loop
+            // change i to start at 1 instead of 0 
+            /*
+            for (int i = 1; i <= length; i++)
             {
                 Console.WriteLine(i + " " + "Abracadabra");
             }
-
-            // we also came up with a solution using while loop
-            // setting int orderCounter = 1 & while
-            // x > orderCounter using the console.Writeline
-            // and adding an orderCounter ++ clause
-            // to count up to the X by incrementing OrderCounter
+            */
 
 
         }
