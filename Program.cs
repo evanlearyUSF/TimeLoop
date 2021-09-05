@@ -1,41 +1,27 @@
-﻿
+﻿using System;
 
-using System;
-
-namespace ConsoleAppStuckInATimeLoop
+namespace ConsoleAppTest
 {
     class Program
     {
         static void Main(string[] args)
         {
+            int x = int.Parse(Console.ReadLine());
 
-
-
-
-            int length = int.Parse(Console.ReadLine());
-
-            //Count starting from 1
-            int OrderCounter = 1;
-
-
-            while (length >= OrderCounter)
+            if (x >= 0 && x <= 100)
             {
+                for (int i = 1; i <= x; i++)
+                {
+                    Console.WriteLine(i + " " + "Abracadabra");
+                }
 
-                Console.WriteLine(OrderCounter.ToString() + " " + "Abracadabra");
-                OrderCounter++;
-
-
+            }
+            else
+            {
+                Console.WriteLine("Please Choose A Number between 1 and 100");
             }
 
 
-            //Could have used a For loop instead of a while loop
-            // change i to start at 1 instead of 0 
-            /*
-            for (int i = 1; i <= length; i++)
-            {
-                Console.WriteLine(i + " " + "Abracadabra");
-            }
-            */
 
 
         }
